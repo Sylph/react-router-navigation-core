@@ -1,11 +1,11 @@
 {
-  "name": "@aletheiaatheos/react-router-navigation-core",
+  "name": "react-router-navigation-core",
   "version": "2.0.0-alpha.6",
   "license": "MIT",
   "main": "lib/index.js",
   "author": "Léo Le Bras <leo.lebrasf@gmail.com> (https://github.com/LeoLeBras/)",
   "scripts": {
-    "prepare": "yarn build",
+    "prepublish": "yarn build",
     "build": "yarn build:cjs && yarn build:flow",
     "build:watch": "babel -d ./lib ./src/ --ignore __tests__ --watch",
     "build:cjs": "babel -d ./lib ./src/ --ignore __tests__",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sylph/react-router-navigation.git"
+    "url": "git+https://github.com/Sylph/react-router-navigation-core.git"
   },
   "keywords": [
     "web",
@@ -30,11 +30,13 @@
     "iterall": "^1.2.2"
   },
   "peerDependencies": {
+    "eslint": "^5.7.0",
     "react": "*",
     "react-router": "4.2.x"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "history": "4.7.2",
     "jest": "^23.6.0",
     "react": "16.3.1",
